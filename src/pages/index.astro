@@ -1,5 +1,31 @@
 ---
+import Header from "../components/Header.astro";
+import Section from "../components/Section.astro";
+import Project from "../components/Project.astro";
 
+const PROJECTS = [
+  {
+    name: "Resticy",
+    description:
+      "Herramienta para recibir pedidos en tiempo real. Disminuye la tasa de error a la hora de tomar ordenes, disminuye el tiempo de preparación de las comidas y mejora la experiencia del cliente.",
+    stack: ["ReactJS", "NodeJS", "MySQL", "TailwindCSS"],
+    url: "github.com",
+  },
+  {
+    name: "Twitter Clon",
+    description:
+      "Herramienta para recibir pedidos en tiempo real. Disminuye la tasa de error a la hora de tomar ordenes, disminuye el tiempo de preparación de las comidas y mejora la experiencia del cliente.",
+    stack: ["ReactJS", "NodeJS", "MySQL", "TailwindCSS"],
+    url: "github.com",
+  },
+  {
+    name: "Clinica Dental Serranos",
+    description:
+      "Herramienta para recibir pedidos en tiempo real. Disminuye la tasa de error a la hora de tomar ordenes, disminuye el tiempo de preparación de las comidas y mejora la experiencia del cliente.",
+    stack: ["ReactJS", "NodeJS", "MySQL", "TailwindCSS"],
+    url: "github.com",
+  },
+];
 ---
 
 <html lang="en">
@@ -8,9 +34,103 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="./src/styles/global.css" />
     <title>Joaquin Di cio | Portfolio</title>
   </head>
-  <body>
-    <section></section>
+  <body class="py-32 text-white bg-[var(--gray)]">
+    <Header />
+
+    <Section>
+      <h2 class="font-bold text-xl">
+        ¡Hola! Soy Joaquín, Técnico Superior en Programación.
+      </h2>
+
+      <p class="mt-5">
+        Comencé a programar a los 16 años y desde entonces no he parado de
+        aprender. Me enfoco en escribir código limpio y crear soluciones
+        eficientes.
+      </p>
+
+      <p class="mt-5">
+        Durante el último tiempo me desempeñé como desarrollador web en una
+        agencia de marketing digital, y en paralelo trabajo de forma freelance
+        en proyectos a medida para distintos clientes.
+      </p>
+
+      <div class="flex gap-1 items-center">
+        <h2 class="font-bold text-xl mt-10">Educación</h2>
+        <img src="/education.png" class="mt-5" alt="gorro de graduacion" />
+      </div>
+
+      <ul class="mt-5 flex flex-col gap-5">
+        <li>
+          Técnico Superior en Programacion <span
+            class="text-[var(--blue)] font-italic"
+            >- 2022 - 2025 - Inst. Da Vinci</span
+          >
+        </li>
+
+        <li>
+          Programación Web Fullstack <span
+            class="text-[var(--blue)] font-italic"
+            >- 2021 - 2022 - Coderhouse</span
+          >
+        </li>
+
+        <li>
+          Bachiller Informático <span class="text-[var(--blue)] font-italic"
+            >- 2015 - 2020 - Coderhouse</span
+          >
+        </li>
+      </ul>
+    </Section>
+
+    <Section>
+      <h2 class="font-bold text-xl mb-5">Mis Proyectos</h2>
+
+      <div>
+        <ul class="mt-5 flex flex-col gap-8">
+          {PROJECTS.map((aProject) => <Project project={aProject} />)}
+        </ul>
+      </div>
+    </Section>
+
+    <Section>
+      <h2 class="font-bold text-xl mb-5">Contacto</h2>
+      <p>
+        Siempre estoy abierto a escuchar sobre nuevos proyectos y oportunidades
+        de crecimiento.
+      </p>
+
+      <div class="flex gap-3 mt-5">
+        <a href="github.com">
+          <img src="/github.png" alt="Github profile" />
+        </a>
+        <a href="linkedin.com">
+          <img src="/linkedin.png" alt="Linkedin profile" />
+        </a>
+      </div>
+
+      <form action="" class="flex flex-col mt-5 gap-3">
+        <input
+          class="bg-white rounded max-w-[600px] py-1 px-2 text-[var(--gray)]"
+          type="text"
+          placeholder="Nombre"
+        />
+        <input
+          class="bg-white rounded max-w-[600px] py-1 px-2 text-[var(--gray)]"
+          type="email"
+          placeholder="Email"
+        />
+        <textarea
+          class="bg-white rounded max-w-[600px] py-1 px-2 text-[var(--gray)]"
+          placeholder="Mensaje"></textarea>
+        <input
+          type="submit"
+          value="Enviar"
+          class="px-3 py-1.5 font-medium text-wite mt-3 bg-[var(--blue)] w-fit rounded"
+        />
+      </form>
+    </Section>
   </body>
 </html>

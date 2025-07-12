@@ -1,0 +1,20 @@
+---
+interface Props {
+    href: string;
+    variant: "blue" | "transparent";
+}
+
+const { href, variant } = Astro.props;
+
+const baseStyles =
+    "px-4 py-1.5 font-medium rounded border-2 border-[var(--blue)]";
+
+const variants = {
+    blue: "bg-[var(--blue)] text-white",
+    transparent: "bg-transparent text-[var(--blue)]",
+};
+---
+
+<a href={href} class={`${baseStyles} ${variants[variant]}`}>
+    <slot />
+</a>

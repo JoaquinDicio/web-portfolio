@@ -1,0 +1,55 @@
+---
+type Project = {
+    name: string;
+    description: string;
+    stack: Array<String>;
+    url: string;
+};
+
+interface Props {
+    project: Project;
+}
+
+const { project } = Astro.props;
+
+const { name, description, stack, url } = project;
+---
+
+<li class="flex h-full w-full gap-5">
+    <img
+        src="/placeholder.webp"
+        alt={name}
+        class="w-[240px] object-cover h-[220px] rounded"
+    />
+
+    <div class="flex flex-col">
+        <div class="h-full">
+            <h4 class="text-3xl font-bold">{name}</h4>
+
+            <div class="my-2">
+                <ul class="flex gap-3 items-center">
+                    {
+                        stack.map((aTech) => (
+                            <li class="bg-white rounded-sm text-[var(--gray)] px-2 pb-2.5 pt-3 leading-0 text-xs">
+                                {aTech}
+                            </li>
+                        ))
+                    }
+                </ul>
+
+                <p class="mt-2">
+                    {description}
+                </p>
+            </div>
+        </div>
+        <div>
+            <a
+                href={url}
+                class="bg-[var(--blue)] flex w-fit gap-2 text-sm text-white font-medium px-3 pt-2.5 pb-2 rounded"
+            >
+                <img src="/link.png" alt="Enlace de proyecto" />
+                Link
+            </a>
+        </div>
+    </div>
+</li>
