@@ -1,8 +1,10 @@
 ---
+import { undefined } from "astro:schema";
+
 interface Props {
   href: string;
   variant: "blue" | "transparent";
-  className: string | undefined;
+  className?: string;
 }
 
 const { href, variant, className } = Astro.props;
