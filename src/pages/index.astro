@@ -38,7 +38,9 @@ const PROJECTS = [
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Joaquin Di cio | Portfolio</title>
   </head>
-  <body class="py-32 text-white bg-[var(--gray)]">
+  <body
+    class="py-32 text-white bg-gradient-to-br from-gray-900 via-[#0a0f1c] to-[#05070e]"
+  >
     <Header />
 
     <Section>
@@ -114,22 +116,22 @@ const PROJECTS = [
 
       <form action="" class="flex flex-col mt-5 gap-3">
         <input
-          class="bg-white rounded max-w-[600px] py-1 px-2 text-[var(--gray)]"
+          class="bg-white rounded max-w-[600px] p-2 text-[var(--gray)]"
           type="text"
           placeholder="Nombre"
         />
         <input
-          class="bg-white rounded max-w-[600px] py-1 px-2 text-[var(--gray)]"
+          class="bg-white rounded max-w-[600px] p-2 text-[var(--gray)]"
           type="email"
           placeholder="Email"
         />
         <textarea
-          class="bg-white rounded max-w-[600px] py-1 px-2 text-[var(--gray)]"
+          class="bg-white rounded max-w-[600px] p-2 text-[var(--gray)]"
           placeholder="Mensaje"></textarea>
         <input
           type="submit"
           value="Enviar"
-          class="px-3 py-1.5 font-medium text-wite mt-3 bg-[var(--blue)] w-fit rounded"
+          class="px-4 py-1.5 font-medium rounded border-2 border-[var(--blue)] transition duration-300 ease-in-out bg-[var(--blue)] text-white hover:shadow-[0_0_8px_var(--blue)] w-fit cursor-pointer"
         />
       </form>
     </Section>
