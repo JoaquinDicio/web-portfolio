@@ -3,30 +3,30 @@ import Link from "./Link.astro";
 ---
 
 <header
-    class="flex flex-col lg:flex-row justify-between lg:items-center max-w-[850px] mx-auto w-full"
+  class="flex flex-col lg:flex-row justify-between lg:items-center max-w-[850px] mx-auto w-full"
 >
+  <div>
     <div>
-        <div>
-            <h1 class="uppercase font-bold text-5xl mb-1">Joaquin Di cio</h1>
-            <p class="text-2xl">Desarrollador Fullstack</p>
-        </div>
-        <div>
-            <nav class="flex gap-3 items-center mt-5">
-                <Link href="#contact" variant="blue">Contactar</Link>
-                <Link href="/joaquindicio.pdf" variant="transparent"
-                    >Descargar CV
-                </Link>
-            </nav>
-        </div>
+      <h1 class="uppercase font-bold text-5xl mb-1">Joaquin Di cio</h1>
+      <p class="text-2xl">Desarrollador Fullstack</p>
     </div>
     <div>
-        <nav class="flex lg:flex-col flex-row lg:gap-5 gap-3 mt-5">
-            <a href="github.com">
-                <img src="/github.png" alt="Github profile" />
-            </a>
-            <a href="linkedin.com">
-                <img src="/linkedin.png" alt="Linkedin profile" />
-            </a>
-        </nav>
+      <nav class="flex gap-3 items-center mt-5">
+        <Link href="#contact" variant="blue">Contactar</Link>
+        <Link href="/joaquindicio.pdf" variant="transparent"
+          >Descargar CV
+        </Link>
+      </nav>
     </div>
+  </div>
+  <div>
+    <nav class="flex lg:flex-col flex-row lg:gap-5 gap-3 mt-5">
+      <a href="github.com">
+        <img src="/github.png" alt="Github profile" />
+      </a>
+      <a href="linkedin.com">
+        <img src="/linkedin.png" alt="Linkedin profile" />
+      </a>
+    </nav>
+  </div>
 </header>
