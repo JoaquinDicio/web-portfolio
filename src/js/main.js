@@ -1,3 +1,5 @@
-import AOS from 'aos'
+import AOS from "aos";
 
-AOS.init()
+AOS.init();
+
+const modalContainer = document.getElementById("modalContainer");
