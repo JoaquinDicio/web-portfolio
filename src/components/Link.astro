@@ -19,6 +19,10 @@ const variants = {
 };
 ---
 
-<a href={href} class={`${baseStyles} ${variants[variant]} ${className}`}>
+<a
+  target="_blank"
+  href={href}
+  class={`${baseStyles} ${variants[variant]} ${className}`}
+>
   <slot />
 </a>

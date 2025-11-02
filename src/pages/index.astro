@@ -2,7 +2,6 @@
 import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
 import Project from "../components/Project.astro";
-import ModalContainer from "../components/ModalContainer.astro";
 
 const PROJECTS = [
   {
@@ -11,20 +10,23 @@ const PROJECTS = [
       "Herramienta para recibir pedidos en tiempo real. Disminuye la tasa de error a la hora de tomar ordenes, disminuye el tiempo de preparación de las comidas y mejora la experiencia del cliente.",
     stack: ["ReactJS", "NodeJS", "MySQL", "TailwindCSS"],
     url: "github.com",
+    projectRepo: "https://github.com/JoaquinDicio/resticy",
   },
   {
     name: "Twitter Clon",
     description:
       "Herramienta para recibir pedidos en tiempo real. Disminuye la tasa de error a la hora de tomar ordenes, disminuye el tiempo de preparación de las comidas y mejora la experiencia del cliente.",
-    stack: ["ReactJS", "NodeJS", "MySQL", "TailwindCSS"],
-    url: "github.com",
+    stack: ["ReactJS", "Firebase", "TailwindCSS"],
+    url: "https://joaquindicio.github.io/twitter-clone/",
+    projectRepo: "http://github.com/JoaquinDicio/twitter-clone",
   },
   {
     name: "Clinica Dental Serranos",
     description:
       "Herramienta para recibir pedidos en tiempo real. Disminuye la tasa de error a la hora de tomar ordenes, disminuye el tiempo de preparación de las comidas y mejora la experiencia del cliente.",
-    stack: ["ReactJS", "NodeJS", "MySQL", "TailwindCSS"],
-    url: "github.com",
+    stack: ["ReactJS", "AstroJS", "TailwindCSS"],
+    url: "https://dentalserranos.com",
+    projectRepo: "https://github.com/JoaquinDicio/clinica-serranos",
   },
 ];
 ---
@@ -138,8 +140,9 @@ const PROJECTS = [
       </form>
     </Section>
 
-    <ModalContainer />
-
     <script src="../js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/759a8eedd2.js"
+      crossorigin="anonymous"></script>
   </body>
 </html>
