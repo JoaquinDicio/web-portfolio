@@ -18,7 +18,10 @@ const { project } = Astro.props;
 const { name, description, stack, url, projectRepo } = project;
 ---
 
-<li class="flex flex-col md:flex-row h-full w-full gap-5">
+<li
+  data-aos="fade-up"
+  class="rounded flex flex-col md:flex-row h-full w-full gap-5"
+>
   <img
     src="/placeholder.webp"
     alt={name}

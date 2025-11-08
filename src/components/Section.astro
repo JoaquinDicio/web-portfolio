@@ -1,8 +1,9 @@
 ---
 import Divider from "../components/Divider.astro";
+const { animate = true } = Astro.props;
 ---
 
-<section data-aos="zoom-in-down" class="max-w-[850px] w-full mx-auto">
+<section data-aos={animate && "fade-up"} class="max-w-[850px] w-full mx-auto">
     <Divider />
     <slot />
 </section>
