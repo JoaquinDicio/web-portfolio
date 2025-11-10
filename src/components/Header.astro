@@ -11,10 +11,32 @@ import Link from "./Link.astro";
       <p class="text-2xl">Desarrollador Fullstack</p>
     </div>
     <div>
-      <nav class="flex gap-3 items-center mt-5">
-        <Link href="#contact" variant="blue">Contactar</Link>
-        <Link href="/joaquindicio.pdf" variant="transparent"
-          >Descargar CV
+      <nav
+        class="flex gap-3 sm:items-center mt-5 flex-col sm:flex-row items-start"
+      >
+        <Link
+          href="#contact"
+          className="flex items-center justify-between w-[150px]"
+          variant="blue"
+          >Contactar
+          <img
+            class="max-w-[25px]"
+            src="/contact.svg"
+            alt="Boton de contacto"
+          />
+        </Link>
+        <Link
+          className="flex items-center justify-between flex-nowrap w-[177px]"
+          href="/joaquindicio.pdf"
+          variant="transparent"
+        >
+          Descargar CV
+
+          <img
+            class="max-w-[25px]"
+            src="/download.svg"
+            alt="Descargar Curriculum"
+          />
         </Link>
       </nav>
     </div>
