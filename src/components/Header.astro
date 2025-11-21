@@ -1,5 +1,6 @@
 ---
 import Link from "./Link.astro";
+import SocialIcon from "./SocialIcon.astro";
 ---
 
 <header
@@ -43,15 +44,17 @@ import Link from "./Link.astro";
   </div>
   <div>
     <nav class="flex lg:flex-col flex-row lg:gap-5 gap-3 mt-5">
-      <a target="_blank" href="https://github.com/JoaquinDicio">
-        <img src="/github.png" alt="Github profile" />
-      </a>
-      <a
-        target="_blank"
+      <SocialIcon
+        img="/github.png"
+        href="https://github.com/JoaquinDicio"
+        alt="Perfil de Github"
+      />
+
+      <SocialIcon
+        img="/linkedin.png"
         href="https://www.linkedin.com/in/joaquin-di-cio-142638230/"
-      >
-        <img src="/linkedin.png" alt="Linkedin profile" />
-      </a>
+        alt="Perfil de Linkedin"
+      />
     </nav>
   </div>
 </header>

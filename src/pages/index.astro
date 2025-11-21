@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
 import Project from "../components/Project.astro";
+import SocialIcon from "../components/SocialIcon.astro";
 
 const PROJECTS = [
   {
@@ -110,12 +111,17 @@ const PROJECTS = [
       </p>
 
       <div class="flex gap-3 mt-5">
-        <a href="github.com">
-          <img src="/github.png" alt="Github profile" />
-        </a>
-        <a href="linkedin.com">
-          <img src="/linkedin.png" alt="Linkedin profile" />
-        </a>
+        <SocialIcon
+          img="/github.png"
+          href="https://github.com/JoaquinDicio"
+          alt="Perfil de Github"
+        />
+
+        <SocialIcon
+          img="/linkedin.png"
+          href="https://www.linkedin.com/in/joaquin-di-cio-142638230/"
+          alt="Perfil de Linkedin"
+        />
       </div>
 
       <form action="" class="flex flex-col mt-5 gap-3">
