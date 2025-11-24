@@ -3,6 +3,7 @@ import Link from "./Link.astro";
 
 type Project = {
   name: string;
+  img: string;
   description: string;
   stack: Array<String>;
   url: string;
@@ -15,7 +16,7 @@ interface Props {
 
 const { project } = Astro.props;
 
-const { name, description, stack, url, projectRepo } = project;
+const { name, description, stack, url, projectRepo, img } = project;
 ---
 
 <li
@@ -23,7 +24,7 @@ const { name, description, stack, url, projectRepo } = project;
   class="rounded flex flex-col md:flex-row h-full w-full gap-5"
 >
   <img
-    src="/placeholder.webp"
+    src={img}
     alt={name}
     class="md:w-[240px] w-full object-cover h-[220px] rounded"
   />
